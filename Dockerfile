@@ -10,8 +10,8 @@ RUN mkdir -p /var/cache/nginx/client_temp \
     && chown -R user-teste:user-teste /var/cache/nginx \
     && chown -R user-teste:user-teste /usr/share/nginx/html \
     && chown -R user-teste:user-teste /etc/nginx 
-
-USER user-teste
+#podemos remover o user do arquivo nginx.conf para ele parar de warning na execução do container
+USER user-teste 
 #adicionar uma rede no comando docker run: docker network create minha_rede e docker run -d --name meu_container --network minha_rede minha_imagem:latest
 
 EXPOSE 80
