@@ -2,7 +2,7 @@ FROM nginx:latest
 
 RUN groupadd -g 1000 user-teste && \
     useradd -u 1000 -g user-teste user-teste
-ARG CACHEBUST=1
+
 
 COPY ./nginx.conf /etc/nginx/
 COPY ./index.html /usr/share/nginx/html

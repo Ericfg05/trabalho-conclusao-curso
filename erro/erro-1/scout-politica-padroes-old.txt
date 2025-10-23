@@ -1,0 +1,24 @@
+
+
+  Target     │  nginx:erro-1  │    0C     3H     1M    60L     2?   
+    digest   │  c2856a700ab1  │                                     
+  Base image │  nginx:1       │    0C     3H     1M    60L     2?   
+
+Policy status  FAILED  (1/7 policies met, 2 missing data)
+
+  Status │                     Policy                     │           Results            
+─────────┼────────────────────────────────────────────────┼──────────────────────────────
+  !      │ No default non-root user found                 │                              
+  ✓      │ No AGPL v3 licenses                            │    0 packages                
+  !      │ Fixable critical or high vulnerabilities found │    0C     1H     0M     0L   
+  !      │ High-profile vulnerabilities found             │    0C     0H     0M     1L   
+  ?      │ No outdated base images                        │    No data                   
+         │                                                │    https://docs.docker.com/go/scout-policy/#no-base-image-data                    
+  ?      │ No unapproved base images                      │    No data                   
+  !      │ Missing supply chain attestation(s)            │    2 deviations              
+
+What's next:
+    View policy violations → docker scout policy nginx:erro-1 --org ericferreira0509
+    View vulnerabilities → docker scout cves nginx:erro-1
+    Compare with the latest in the registry → docker scout compare --to-latest nginx:erro-1 --org ericferreira0509
+

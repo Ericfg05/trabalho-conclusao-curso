@@ -1,0 +1,24 @@
+
+
+  Target     │  local://erro-1:latest  │    0C     2H     1M    46L   
+    digest   │  e4ba03e4eac3           │                              
+  Base image │  nginx:1                │    0C     2H     1M    46L   
+
+Policy status  FAILED  (2/7 policies met, 2 missing data)
+
+  Status │                     Policy                     │           Results            
+─────────┼────────────────────────────────────────────────┼──────────────────────────────
+  !      │ No default non-root user found                 │                              
+  ✓      │ No AGPL v3 licenses                            │    0 packages                
+  !      │ Fixable critical or high vulnerabilities found │    0C     1H     0M     0L   
+  ✓      │ No high-profile vulnerabilities                │    0C     0H     0M     0L   
+  ?      │ No outdated base images                        │    No data                   
+         │                                                │    https://docs.docker.com/go/scout-policy/#no-base-image-data                    
+  ?      │ No unapproved base images                      │    No data                   
+  !      │ Missing supply chain attestation(s)            │    2 deviations              
+
+What's next:
+    View policy violations → docker scout policy local://erro-1:latest --org ericferreira0509
+    View vulnerabilities → docker scout cves local://erro-1:latest
+    Compare with the latest in the registry → docker scout compare --to-latest local://erro-1:latest --org ericferreira0509
+

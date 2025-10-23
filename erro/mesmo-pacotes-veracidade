@@ -1,0 +1,24 @@
+grype: 								
+libexpat1         2.7.1-2                                            deb   CVE-2025-59375    High        < 0.1% (23rd)  < 0.1								
+libtiff6          4.7.0-3                                            deb   CVE-2025-9900     High        < 0.1% (21st)  < 0.1								
+curl              8.14.1-2                              (won't fix)  deb   CVE-2025-9086     High        < 0.1% (22nd)  < 0.1								
+libcurl4t64       8.14.1-2                              (won't fix)  deb   CVE-2025-9086     High        < 0.1% (22nd)  < 0.1								
+libxslt1.1        1.1.35-1.2+deb13u2                    (won't fix)  deb   CVE-2025-7425     High        < 0.1% (6th)   < 0.1  								
+								
+trivy								
+libtiff6         │ CVE-2025-9900       │ HIGH     │              │ 4.7.0-3                              │               │ libtiff: Libtiff Write-What-Where                            │								
+│                  │                     │          │              │                                      │               │ https://avd.aquasec.com/nvd/cve-2025-9900								
+libxslt1.1       │ CVE-2025-7425       │ HIGH     │              │ 1.1.35-1.2+deb13u2                   │               │ libxslt: Heap Use-After-Free in libxslt caused by atype      │								
+│                  │                     │          │              │                                      │               │ corruption in xmlAttrPtr                                     │								
+│                  │                     │          │              │                                      │               │ https://avd.aquasec.com/nvd/cve-2025-7425								
+								
+docker scout								
+HIGH CVE-2025-9900			Libtiff					
+https://scout.docker.com/v/CVE-2025-9900?s=debian&n=tiff&ns=debian&t=deb&osn=debian&osv=13&vr=%3C4.7.0-3%2Bdeb13u1								
+Affected range : <4.7.0-3+deb13u1								
+Fixed version  : 4.7.0-3+deb13u1		 	pkg:deb/debian/tiff@4.7.0-3?os_distro=trixie&os_name=debian&os_version=13					
+								
+✗ HIGH CVE-2025-59375								
+https://scout.docker.com/v/CVE-2025-59375?s=debian&n=expat&ns=debian&t=deb&osn=debian&osv=13&vr=%3E%3D2.7.1-2								
+Affected range : >=2.7.1-2			libexpat no Expat antes de 2.7.2 permite que invasores acionem grandes alocações de memória dinâmica por meio de um pequeno documento que é enviado para análise					
+Fixed version  : not fixed			pkg:deb/debian/expat@2.7.1-2?os_distro=trixie&os_name=debian&os_version=13					
